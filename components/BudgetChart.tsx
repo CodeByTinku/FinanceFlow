@@ -16,7 +16,7 @@ export const BudgetChart: React.FC<BudgetChartProps> = ({ allocations, income })
 
   if (income === 0) {
       return (
-          <div className="h-64 flex flex-col items-center justify-center text-slate-400 bg-slate-50 rounded-lg border border-dashed border-slate-200">
+          <div className="h-64 flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-dashed border-slate-200 dark:border-slate-700 transition-colors">
               <p>Set an income to see the breakdown</p>
           </div>
       )

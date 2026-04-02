@@ -101,19 +101,19 @@ export const CategorySliders: React.FC<CategorySlidersProps> = ({ income, alloca
           <div key={key} className="space-y-3">
             <div className="flex justify-between items-end">
               <div className="flex items-center gap-2">
-                <div className={`p-2 rounded-lg bg-slate-100 ${config.color}`}>
+                <div className={`p-2 rounded-lg bg-slate-100 dark:bg-slate-800 transition-colors ${config.color}`}>
                     <Icon size={20} />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-slate-700">{config.label}</h3>
-                  <p className="text-xs text-slate-400">{config.desc}</p>
+                  <h3 className="font-semibold text-slate-700 dark:text-slate-200 transition-colors">{config.label}</h3>
+                  <p className="text-xs text-slate-400 dark:text-slate-500 transition-colors">{config.desc}</p>
                 </div>
               </div>
               <div className="text-right">
                 <div className={`text-xl font-bold ${config.color}`}>
                    {percentage}%
                 </div>
-                <div className="text-sm font-medium text-slate-500">
+                <div className="text-sm font-medium text-slate-500 dark:text-slate-400 transition-colors">
                   ₹{amount.toLocaleString('en-IN')}
                 </div>
               </div>
@@ -130,7 +130,7 @@ export const CategorySliders: React.FC<CategorySlidersProps> = ({ income, alloca
                 className={`w-full z-10 ${config.color}`}
               />
               {/* Custom Track Background for visual flair */}
-              <div className="absolute top-1/2 left-0 w-full h-1.5 bg-slate-100 rounded-full transform -translate-y-1/2 overflow-hidden pointer-events-none">
+              <div className="absolute top-1/2 left-0 w-full h-1.5 bg-slate-100 dark:bg-slate-700 rounded-full transform -translate-y-1/2 overflow-hidden pointer-events-none transition-colors">
                  <div 
                     className={`h-full ${config.bg} transition-all duration-100 ease-out`} 
                     style={{ width: `${percentage}%` }}
@@ -141,7 +141,7 @@ export const CategorySliders: React.FC<CategorySlidersProps> = ({ income, alloca
         );
       })}
       
-      <div className="pt-4 border-t border-slate-100 flex justify-between items-center text-sm text-slate-400">
+      <div className="pt-4 border-t border-slate-100 dark:border-slate-700 flex justify-between items-center text-sm text-slate-400 dark:text-slate-500 transition-colors">
         <span>Total Distribution</span>
         <span className={`font-mono ${(allocations.needs + allocations.wants + allocations.savings) === 100 ? 'text-green-500' : 'text-red-500'}`}>
           {allocations.needs + allocations.wants + allocations.savings}%

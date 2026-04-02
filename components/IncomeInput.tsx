@@ -41,11 +41,11 @@ export const IncomeInput: React.FC<IncomeInputProps> = ({ income, setIncome, onR
   return (
     <div className="flex flex-col sm:flex-row items-end sm:items-center gap-4 w-full">
       <div className="flex-grow w-full">
-        <label htmlFor="income" className="block text-sm font-medium text-slate-500 mb-1">
+        <label htmlFor="income" className="block text-sm font-medium text-slate-500 dark:text-slate-400 mb-1">
           Monthly Pocket Money / Income
         </label>
         <div className="relative">
-          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400 dark:text-slate-500">
             <IndianRupee size={18} />
           </div>
           <input
@@ -56,13 +56,13 @@ export const IncomeInput: React.FC<IncomeInputProps> = ({ income, setIncome, onR
             onBlur={handleBlur}
             onKeyDown={handleKeyDown}
             placeholder="e.g. 5000"
-            className="block w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors text-lg font-semibold text-slate-800 placeholder-slate-300"
+            className="block w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors text-lg font-semibold text-slate-800 dark:text-white placeholder-slate-300 dark:placeholder-slate-500"
           />
         </div>
       </div>
       <button
         onClick={onReset}
-        className="text-slate-400 hover:text-red-500 transition-colors p-2 rounded-lg hover:bg-red-50 flex items-center gap-2 text-sm"
+        className="text-slate-400 dark:text-slate-500 hover:text-red-500 dark:hover:text-red-400 transition-colors p-2 rounded-lg hover:bg-red-50 dark:hover:bg-red-900/20 flex items-center gap-2 text-sm"
         title="Reset all data"
       >
         <RefreshCw size={16} />
